@@ -25,7 +25,7 @@ export function WordTable() {
     setIsLoading(true);
     (async () => {
       try {
-        const res = await api.get("words/");
+        const res = await api.get("word_page/");
         console.log(res.data);
         dispatch(setWords(res.data.results));
         dispatch(setNext(res.data.next));
